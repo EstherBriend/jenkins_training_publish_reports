@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Requirements') {
             steps {
-                dir("${env.WORKSPACE}/jenkins_training_publish_reports"){
+                dir("${env.WORKSPACE}/"){
                     sh 'python3 -m venv venv'
                     sh './venv/bin/pip3 install --upgrade --requirement requirements.txt'
                 }
